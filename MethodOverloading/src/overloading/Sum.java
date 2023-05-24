@@ -9,8 +9,8 @@ public class Sum {
     }
     
     // Method to calculate sum of three integers
-    public static int sum(int num1, int num2, int num3) {
-        return num1 + num2 + num3;
+    public static int sum(int num1, int num2) {
+        return num1 + num2 ;
     }
     
     // Method to calculate average of two doubles
@@ -40,10 +40,10 @@ public class Sum {
         System.out.println("**Enter three integers to calculate their sum**:");
         int x = input.nextInt();
         int y = input.nextInt();
-        int z = input.nextInt();
+       // int z = input.nextInt();
         
         // Call overloaded sum method for three integers
-        int intSum3 = sum(x, y, z);
+        int intSum3 = sum(x, y);
         System.out.println("Sum of three integer is " + intSum3);
         System.out.println();
         
