@@ -1,0 +1,112 @@
+package Inheritance;
+
+	public class Vehicle {
+	    private String engineType;
+	    private int yearOfManufacture;
+	    private String manufacturer;
+
+	    public Vehicle(String engineType, int yearOfManufacture, String manufacturer) {
+	        this.engineType = engineType;
+	        this.yearOfManufacture = yearOfManufacture;
+	        this.manufacturer = manufacturer;
+	    }
+
+	    public String getEngineType() {
+	        return engineType;
+	    }
+
+	    public void setEngineType(String engineType) {
+	        this.engineType = engineType;
+	    }
+
+	    public int getYearOfManufacture() {
+	        return yearOfManufacture;
+	    }
+
+	    public void setYearOfManufacture(int yearOfManufacture) {
+	        this.yearOfManufacture = yearOfManufacture;
+	    }
+
+	    public String getManufacturer() {
+	        return manufacturer;
+	    }
+
+	    public void setManufacturer(String manufacturer) {
+	        this.manufacturer = manufacturer;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return " **Engine Type: " + engineType +"\n **Year of Manufacture: " + yearOfManufacture +
+	                "\n **Manufacturer: " + manufacturer;
+	    }
+	}
+
+	class Car extends Vehicle {
+	    private String transmissionType;
+	    private String carType;
+
+	    public Car(String engineType, int yearOfManufacture, String manufacturer, String transmissionType, String carType) {
+	        super(engineType, yearOfManufacture, manufacturer);
+	        this.transmissionType = transmissionType;
+	        this.carType = carType;
+	    }
+
+	    public String getTransmissionType() {
+	        return transmissionType;
+	    }
+
+	    public void setTransmissionType(String transmissionType) {
+	        this.transmissionType = transmissionType;
+	    }
+
+	    public String getCarType() {
+	        return carType;
+	    }
+
+	    public void setCarType(String carType) {
+	        this.carType = carType;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return super.toString() + "\n **Transmission Type: " + transmissionType + "\n **Car Type: " + carType;
+	    }
+	}
+
+	class Bike extends Vehicle {
+	    private int numberOfStrokes;
+	    private int rpm;
+
+	    public Bike(String engineType, int yearOfManufacture, String manufacturer, int numberOfStrokes, int rpm) {
+	        super(engineType, yearOfManufacture, manufacturer);
+	        this.numberOfStrokes = numberOfStrokes;
+	        this.rpm = rpm;
+	    }
+
+	    public int getNumberOfStrokes() {
+	        return numberOfStrokes;
+	    }
+
+	    public void setNumberOfStrokes(int numberOfStrokes) {
+	        this.numberOfStrokes = numberOfStrokes;
+	    }
+
+	    public int getRpm() {
+	        return rpm;
+	    }
+
+	    public void setRpm(int rpm) {
+	        this.rpm = rpm;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return super.toString() + ", Number of Strokes: " + numberOfStrokes + ", RPM: " + rpm;
+	    }
+	}
+	
+
+	
+	
+	
